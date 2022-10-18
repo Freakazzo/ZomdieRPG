@@ -1,34 +1,19 @@
-/*
-Inherite class Zombie from the class Monster
-
-This fragment of code has to output
-
-Monster Alice the Zombie was created
-Monster Alice the Zombie attacked with damage 5
-Raaaauuughhhh Alice the Zombie growled
-Raaaauuughhhh Alice the Zombie growled
-Monster Bob the Zombie was created
-Monster Bob the Zombie attacked with damage 5
-Raaaauuughhhh Bob the Zombie growled
-Raaaauuughhhh Bob the Zombie growled
-
-NOTE: The code of Zombie class has to output
-      SMALL part of this.
-
-The most output class Monster makes.
-You cannot see Monster class source,
-but can instance objects of it and play with them.
-*/
 public class Main {
     public static void main(String[] args) {
-//        Zombie zombie1 = new Zombie("Alice");
-//        zombie1.attack();
-//        zombie1.growl();
-        Zombie zombie = new Zombie("Bob");
-//        zombie.attack();
-//        zombie.growl();
-        zombie.growl();
-        zombie.growl(true);
-        zombie.growl(false);
+        Battle battle = new Battle();
+        battle.add(new Zombie("Alice"));
+        battle.add(new Zombie("Bob"));
+        battle.add(new Zombie("Eve"));
+        battle.add(new GiantSnake("Kaa"));
+        battle.add(new GiantSnake("Son of Kaa"));
+
+        battle.add(new Zombie("Noname"));
+        battle.add(new GiantSnake("Noname"));
+
+        battle.start();
+
+        battle.add(new Zombie("Alice"));
+        battle.add(new Zombie("Bob"));
+        battle.start();
     }
 }

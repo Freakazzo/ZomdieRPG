@@ -6,16 +6,15 @@ public class Zombie extends Monster {
     }
 
     @Override
-    public void growl(){
+    public void growl() {
         System.out.print(scream);
         super.growl();
     }
 
-    public void growl(boolean loud){
+    public void growl(boolean loud) {
         if (!loud) {
             growl();
-        }
-        else {
+        } else {
             System.out.print(scream.toUpperCase());
             super.growl();
         }
@@ -26,5 +25,5 @@ public class Zombie extends Monster {
         super.attack();
         growl();
     }
-}
 
+}
