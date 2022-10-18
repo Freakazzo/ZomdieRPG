@@ -25,7 +25,10 @@ public class Main {
 //        zombie1.attack();
 //        zombie1.growl();
         Zombie zombie = new Zombie("Bob");
-        zombie.attack();
+//        zombie.attack();
+//        zombie.growl();
         zombie.growl();
+        zombie.growl(true);
+        zombie.growl(false);
     }
 }
